@@ -1,5 +1,5 @@
 env
-secrets.py
+secret.py
 
 # The following has been copied from https://github.com/github/gitignore/blob/master/Python.gitignore
 

@@ -1,11 +1,10 @@
-
 {% extends 'main/base.html' %}
 {% load static %}
 
 <!-- ================================
 Start SEO blocks
 ================================= -->
-{% block title %}pokacyb - Home{% endblock %}
+{% block title %}{% endblock %}
 {% block decription %}{% endblock %}
 {% block keywords %}{% endblock %}
 <!-- ================================
@@ -43,7 +42,7 @@ Start Content
         </div>
         <div class="col-md">
           <div class="bannerContent">
-            <h1 class="xlTitle pb-3">Hi, I’m {{me.first_name|title}}, <br> a {{me.userprofile.title}} </br></h1>
+            <h1 class="xlTitle pb-3">Hi, I’m {{me.first_name|title}}</h1>
             <p>{{me.userprofile.bio}}</p>
             <div class="bannerBtnCol">
               <div class="row">
@@ -72,11 +71,9 @@ Start Content
             {% for sk in me.userprofile.skills.all %}
             {% if sk.is_key_skill %}
             <div class="keySkillCard">
-              {% if sk.image %}
               <div class="ksIconCol">
                 <img src="{{sk.image.url}}" alt="...">
               </div>
-              {% endif %}
               <span class="ksText">{{sk.name}}</span>
             </div>
             {% endif %}
@@ -88,7 +85,7 @@ Start Content
           <div class="progressCol">
             <div class="progressCard">
               {% for sk in me.userprofile.skills.all %}
-              {% if sk.is_key_skill %}
+              {% if not sk.is_key_skill %}
               <div class="progressCol">
                 <span class="progressLbl">{{sk.name}}</span>
                 <div class="row g-2 align-items-center">

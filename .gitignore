@@ -1,5 +1,6 @@
 env
 secret.py
+aw
 
 # The following has been copied from https://github.com/github/gitignore/blob/master/Python.gitignore
 

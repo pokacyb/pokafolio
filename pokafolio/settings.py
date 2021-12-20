@@ -29,6 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['pokafolio.herokuapp.com', '127.0.0.1']
 
+SECURE_SSL_REDIRECT = True
 
 # Application definition
 

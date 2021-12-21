@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'DEFAULT_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['pokafolio.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['pokafolio.herokuapp.com/', '127.0.0.1', 'pokacyb.com/', 'www.pokacyb.com/', 'https://pokacyb.com/']
 
 SECURE_SSL_REDIRECT = True
 
